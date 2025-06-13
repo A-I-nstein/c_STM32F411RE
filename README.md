@@ -6,6 +6,7 @@ Bare-Metal Embedded C Programming with STM32 Nucleo-64 development board (STM32F
 * OpenOCD: [Download Here](https://github.com/xpack-dev-tools/openocd-xpack/releases)
 * GNU Make: [Download Here](https://gnuwin32.sourceforge.net/packages/make.htm)
 * Add the executables as environment variables
+* Download the STM32CubeF4 packages from [here](https://www.st.com/en/embedded-software/stm32cubef4.html) and copy the `Drivers/CMSIS/Include` folder and `Drivers/CMSIS/Device` folder to a new folder in the project root directory called `chip_headers/CMSIS`
 
 # Build and Load Programs (using make)
 * Move into the required project. (ex. cd p1_blinky)
