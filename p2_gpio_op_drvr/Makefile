@@ -11,10 +11,13 @@ final : program.elf
 main.o : main.c
 	$(CC) $(CFLAGS) $^ -o $@
 
+gpio.o : gpio.c
+	$(CC) $(CFLAGS) $^ -o $@
+
 stm32f411_startup.o : ../linker_startup/stm32f411_startup.c
 	$(CC) $(CFLAGS) $^ -o $@
 
-program.elf: main.o stm32f411_startup.o
+program.elf: main.o gpio.o stm32f411_startup.o
 	$(CC) $(LDFLAGS) $^ -o $@
 
 load :
